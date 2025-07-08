@@ -5,28 +5,25 @@ const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 //Event Listeners
-document.addEventListener("DOMContentLoaded", getTodos);
+// document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
 filterOption.addEventListener("click", filterTodo);
 
 
-function addTodo(e){
-     e.preventDefault();
-  //Create todo div
-  const todoDiv = document.createElement("div");
-  todoDiv.classList.add("todo");
-  //Create list
-  const newTodo = document.createElement("li");
-  newTodo.innerText = todoInput.value;
-  //Save to local - do this last
-  //Save to local
-  saveLocalTodos(todoInput.value);
-  //
-  newTodo.classList.add("todo-item");
-  todoDiv.appendChild(newTodo);
-  todoInput.value = "";
-  //Create Completed Button
+function addTodo(event){
+    console.log("addTodo function called!");
+    event.preventDefault();
+const todoDiv = document.createElement("div");
+todoDiv.classList.add("todo"); 
+
+const newTodo = document.createElement("li");
+newTodo.innerText = "HEYOO";
+todoDiv.classList.add("todo-item");
+todoDiv.appendChild(newTodo);
+
+
+//  Create Completed Button
   const completedButton = document.createElement("button");
   completedButton.innerHTML = `<i class="fas fa-check"></i>`;
   completedButton.classList.add("complete-btn");
@@ -36,7 +33,10 @@ function addTodo(e){
   trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
-  //attach final Todo
+
   todoList.appendChild(todoDiv);
+
+
+
 
 }
