@@ -18,7 +18,7 @@ const todoDiv = document.createElement("div");
 todoDiv.classList.add("todo"); 
 
 const newTodo = document.createElement("li");
-newTodo.innerText = "HEYOO";
+newTodo.innerText = todoInput.value;
 todoDiv.classList.add("todo-item");
 todoDiv.appendChild(newTodo);
 
@@ -36,6 +36,23 @@ todoDiv.appendChild(newTodo);
 
   todoList.appendChild(todoDiv);
 
+  todoInput.value = "";
+
+
+}
+
+function deleteTodo(e){
+    const item = e.target;
+    if(item.classList[0]==="trash-btn"){
+        const daddy =item.parentElement;
+        daddy.classList.toggle("fall"); 
+        daddy.remove();
+    }
+
+    if(item.classList[0]==="complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+    }
 
 
 
