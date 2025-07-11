@@ -53,7 +53,7 @@ function deleteTodo(e){
         const todo = item.parentElement;
         todo.classList.toggle("completed");
     }
-    /*add a /*
+    
 
 
 }
