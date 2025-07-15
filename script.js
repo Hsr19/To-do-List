@@ -23,7 +23,7 @@ todoDiv.classList.add("todo-item");
 todoDiv.appendChild(newTodo);
 
 
-//  Create Completed Butto
+//  Create Completed Button
   const completedButton = document.createElement("button");
   completedButton.innerHTML = `<i class="fas fa-check"></i>`;
   completedButton.classList.add("complete-btn");
