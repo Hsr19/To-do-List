@@ -37,7 +37,7 @@ todoDiv.appendChild(newTodo);
   todoList.appendChild(todoDiv);
 
   todoInput.value = "";
-//DONE
+//DO
 }
 
 function deleteTodo(e){
